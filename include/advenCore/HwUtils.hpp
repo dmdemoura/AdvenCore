@@ -1,14 +1,17 @@
-#ifndef DM_HWUTILS
-#define DM_HWUTILS
+#ifndef DM_ADVENCORE_HWUTILS_HPP
+#define DM_ADVENCORE_HWUTILS_HPP
 
-class HwUtils
+namespace AdvenCore
 {
-public:
-    template <typename T, typename T1, typename T2, typename T3>
-    static void SetBit(T& dest, T1 value, T2 bitOffset, T3 bitMask)
+    class HwUtils
     {
-        dest = (dest & ~((int) bitMask)) | ((int) value << (int) bitOffset & (int) bitMask);
-    }
-};
+    public:
+        template <typename T, typename T1, typename T2, typename T3>
+        static void SetBit(T& dest, T1 value, T2 bitOffset, T3 bitMask)
+        {
+            dest = (dest & ~((int) bitMask)) | ((int) value << (int) bitOffset & (int) bitMask);
+        }
+    };
+}
 
 #endif

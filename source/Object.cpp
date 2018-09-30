@@ -1,7 +1,8 @@
+#include <tonc.h>
 #include "Object.hpp"
 #include "HwUtils.hpp"
-#include "/home/gabriel/opt/devkitpro/libtonc/include/tonc.h"
 
+using namespace AdvenCore;
 
 volatile Object::ObjectAttr (* const Object::objectAttributeMemory)[MaxObjectCount] = (volatile ObjectAttr (*)[MaxObjectCount]) 0x07000000;
 Object::ObjectAttr Object::objectAttributeBuffer[MaxObjectCount] = {};

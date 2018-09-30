@@ -2,6 +2,8 @@
 #include "HwUtils.hpp"
 #include <tonc.h>
 
+using namespace AdvenCore;
+
 volatile short (* const Backgrounds::backgroundControlRegisters)[BgControlRegisterCount] = (volatile short (*)[BgControlRegisterCount]) 0x04000008;
 volatile short (* const Backgrounds::backgroundOffsetRegisters)[BgOffsetRegisterCount] = (volatile short (*)[BgOffsetRegisterCount]) 0x04000010;
 

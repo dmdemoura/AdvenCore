@@ -1,6 +1,8 @@
 #include "Display.hpp"
 #include "HwUtils.hpp"
 
+using namespace AdvenCore;
+
 volatile unsigned short * const Display::displayControlRegister = (volatile unsigned short *) 0x04000000;
 
 void Display::Clear()

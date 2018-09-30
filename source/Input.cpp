@@ -1,4 +1,7 @@
 #include "Input.hpp"
+
+using namespace AdvenCore;
+
 volatile Input::KeyInput * const Input::KeyInputRegister = (volatile Input::KeyInput *) 0x4000130; 
 Input::KeyInput Input::KeyInputCurrent = 0;
 Input::KeyInput Input::KeyInputPrevious = 0;

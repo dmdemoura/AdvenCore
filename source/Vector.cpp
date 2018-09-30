@@ -1,5 +1,7 @@
 #include "Vector.hpp"
 
+using namespace AdvenCore;
+
 Vector::Vector() : Vector(0,0) {}
 Vector::Vector(int x, int y) : x(x), y(y) {}
 
@@ -19,27 +21,27 @@ Vector Vector::operator-()
 {
     return {-x, -y};
 }
-Vector operator+(Vector a, Vector b)
+Vector AdvenCore::operator+(Vector a, Vector b)
 {
     return {a.x + b.x, a.y + b.y};
 }
-Vector operator-(Vector a, Vector b)
+Vector AdvenCore::operator-(Vector a, Vector b)
 {
     return {a.x - b.x, a.y - b.y};
 }
-Vector operator*(Vector a, int b)
+Vector AdvenCore::operator*(Vector a, int b)
 {
     return {a.x * b, a.y * b};
 }
-Vector operator*(int a, Vector b)
+Vector AdvenCore::operator*(int a, Vector b)
 {
     return b * a;
 }
-bool operator==(Vector a, Vector b)
+bool AdvenCore::operator==(Vector a, Vector b)
 {
     return a.x == b.x && a.y == b.y;
 }
-bool operator!=(Vector a, Vector b)
+bool AdvenCore::operator!=(Vector a, Vector b)
 {
     return !(a == b);
 }
