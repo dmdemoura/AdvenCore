@@ -22,7 +22,7 @@ void Input::KeyUpdate()
 bool Input::GetKeyState(Key key, KeyInput keyInput)
 {
     //The values of the Key enum are bit masks for a KeyInput value
-    return KeyInputCurrent & (int) key;
+    return keyInput & (int) key;
 }
 bool Input::GetKeyHeld(Key key)
 {
