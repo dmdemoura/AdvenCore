@@ -9,7 +9,7 @@ if(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/external/CmakeStuff/.git)
     execute_process(COMMAND git submodule update --init -- external/CmakeStuff
                     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 endif()
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/CmakeStuff)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/external/CmakeStuff)
 
 include(CPack)
 include(GNUInstallDirs)
