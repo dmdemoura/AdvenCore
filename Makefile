@@ -29,6 +29,8 @@ INCLUDES	:= include/advenCore
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
+DEFINES := -DADVENCORE_USE_SRAM
+
 ARCH	:=	-mthumb -mthumb-interwork
 
 CFLAGS	:=  -g -Wall -O3\
@@ -37,7 +39,7 @@ CFLAGS	:=  -g -Wall -O3\
 		-ffast-math\
 		$(ARCH)
 
-CFLAGS	+=	$(INCLUDE)
+CFLAGS	+=	$(INCLUDE) $(DEFINES)
 
 CXXFLAGS	:=	$(CFLAGS) -fno-exceptions --std=c++17
 
