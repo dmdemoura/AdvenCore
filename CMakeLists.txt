@@ -26,6 +26,23 @@ add_library(advencore
     source/Timers.cpp
     source/SRAM.cpp
     source/ScreenEntry.cpp
+    source/LinkMultiplayer.cpp
+    source/LinkNormal.cpp
+    include/advenCore/LinkNormal.hpp
+    include/advenCore/Backgrounds.hpp
+    include/advenCore/ScreenEntry.hpp
+    include/advenCore/Property.hpp
+    include/advenCore/Timers.hpp
+    include/advenCore/Object.hpp
+    include/advenCore/BitField.hpp
+    include/advenCore/HwUtils.hpp
+    include/advenCore/Types.hpp
+    include/advenCore/VBAPrint.hpp
+    include/advenCore/SRAM.hpp
+    include/advenCore/Display.hpp
+    include/advenCore/Input.hpp
+    include/advenCore/Vector.hpp
+    include/advenCore/LinkMultiplayer.hpp
 )
 
 target_include_directories(advencore
