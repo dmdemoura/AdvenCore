@@ -19,6 +19,8 @@ namespace AdvenCore
         Vector operator+=(Vector a);
         Vector operator-=(Vector a);
         Vector operator-();
+        Vector operator>>(int a);
+        Vector operator<<(int a);
     };
 
     Vector operator+(Vector a, Vector b);

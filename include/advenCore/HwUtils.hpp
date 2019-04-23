@@ -9,6 +9,7 @@
 #define DM_ADVENCORE_HWUTILS_HPP
 
 #include <limits>
+#include <cstdint>
 
 namespace AdvenCore
 {
@@ -70,6 +71,12 @@ namespace AdvenCore
             T mask = ~(upperMask | lowerMask); //Combines the two parts and negates it.
 
             return mask;
+        }
+
+        template<typename T>
+        static T* OffsetPointer(T* pointer, std::ptrdiff_t offset)
+        {
+            return reinterpret_cast<T*>(reinterpret_cast<uint8_t*>(pointer) + offset);
         }
     };
 }

@@ -28,6 +28,14 @@ Vector Vector::operator-()
 {
     return {-x, -y};
 }
+Vector Vector::operator>>(int a)
+{
+    return {x >> a, y >> a};
+}
+Vector Vector::operator<<(int a)
+{
+    return {x << a, y << a};
+}
 Vector AdvenCore::operator+(Vector a, Vector b)
 {
     return {a.x + b.x, a.y + b.y};

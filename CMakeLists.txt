@@ -43,6 +43,9 @@ add_library(advencore
     include/advenCore/Input.hpp
     include/advenCore/Vector.hpp
     include/advenCore/LinkMultiplayer.hpp
+    include/advenCore/SystemCall.hpp
+    source/SystemCall.s
+    include/advenCore/macros/Property.hpp
 )
 
 target_include_directories(advencore

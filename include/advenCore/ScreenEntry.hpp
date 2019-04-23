@@ -30,7 +30,8 @@ namespace AdvenCore
     private:
         unsigned short entry;
     public:
-        ScreenEntry(int tileID, bool horizontalFlip = false, bool verticalFlip = false);
+        explicit ScreenEntry(int tileID, bool horizontalFlip = false, bool verticalFlip = false, int paletteBank = 0);
+        operator const unsigned short(); //NOLINT
     };
 }
 

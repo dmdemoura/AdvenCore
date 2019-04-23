@@ -10,10 +10,15 @@
 
 using namespace AdvenCore;
 
-ScreenEntry::ScreenEntry(int tileID, bool horizontalFlip, bool verticalFlip)
+ScreenEntry::ScreenEntry(int tileID, bool horizontalFlip, bool verticalFlip, int paletteBank)
 {
-    HwUtils::SetBit(entry, tileID, SEOffsets::TileID, SEMasks::TileID);
-    HwUtils::SetBit(entry, horizontalFlip, SEOffsets::HorizontalFlip, SEMasks::HorizontalFlip);
-    HwUtils::SetBit(entry, verticalFlip, SEOffsets::VerticalFlip, SEMasks::VerticalFlip);
-    HwUtils::SetBit(entry, 0, SEOffsets::PalleteBank, SEMasks::PalleteBank);
+    HwUtils::SetBit(entry, tileID, ScreenEntry::SEOffsets::TileID, ScreenEntry::SEMasks::TileID);
+    HwUtils::SetBit(entry, horizontalFlip, ScreenEntry::SEOffsets::HorizontalFlip, ScreenEntry::SEMasks::HorizontalFlip);
+    HwUtils::SetBit(entry, verticalFlip, ScreenEntry::SEOffsets::VerticalFlip, ScreenEntry::SEMasks::VerticalFlip);
+    HwUtils::SetBit(entry, paletteBank, ScreenEntry::SEOffsets::PalleteBank, ScreenEntry::SEMasks::PalleteBank);
+}
+
+ScreenEntry::operator const unsigned short()
+{
+    return entry;
 }

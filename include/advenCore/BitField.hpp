@@ -20,6 +20,10 @@ namespace AdvenCore
     public:
         explicit BitField() = delete;
         explicit BitField(volatile unsigned short * registerPtr) : registerPtr(registerPtr) {}
+        explicit BitField(volatile unsigned short * registerPtr, T value) : registerPtr(registerPtr)
+        {
+            HwUtils::SetBit(*registerPtr, value, start, HwUtils::Mask<unsigned short>(start, end));
+        }
         T operator= (const T other)
         {
             HwUtils::SetBit(*registerPtr, other, start, HwUtils::Mask<unsigned short>(start, end));
